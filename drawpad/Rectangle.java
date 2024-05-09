@@ -1,5 +1,7 @@
 package drawpad;
 
+import vector.Vector2D;
+
 import java.awt.*;
 
 /**
@@ -22,6 +24,12 @@ public class Rectangle extends AbstractShape{
      */
     public Rectangle(Color color, double width, double height, double pos_x, double pos_y) {
         super(color, pos_x, pos_y);
+        this.width = width;
+        this.height = height;
+    }
+
+    public Rectangle(double width, double height, Vector2D position){
+        super(position.x, position.y);
         this.width = width;
         this.height = height;
     }

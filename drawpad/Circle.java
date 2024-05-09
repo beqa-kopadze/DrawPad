@@ -1,5 +1,6 @@
 package drawpad;
 
+import vector.Vector2D;
 import java.awt.*;
 
 /**
@@ -36,6 +37,10 @@ public class Circle extends AbstractShape {
         this.radius = radius;
     }
 
+    public Circle(double radius, Vector2D position){
+        super(position.x, position.y);
+        this.radius = radius;
+    }
     /**
      * Constructor to create a Circle object with a specified radius.
      *

@@ -6,9 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DrawPadDemo implements ActionListener {
-    private JFrame frame;
     private DrawPadPanel drawPadPanel;
-    private Timer timer;
 
     private Circle circle;
     private Rectangle rectangle;
@@ -19,7 +17,7 @@ public class DrawPadDemo implements ActionListener {
     }
 
     private void createAndShowGUI() {
-        frame = new JFrame("Draw Pad");
+        JFrame frame = new JFrame("Draw Pad");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         drawPadPanel = new DrawPadPanel();
@@ -36,7 +34,7 @@ public class DrawPadDemo implements ActionListener {
         frame.setSize(400, 300);
         frame.setVisible(true);
 
-        timer = new Timer(1000 / 60, this); // 60 frames per second
+        Timer timer = new Timer(1000 / 60, this); // 60 frames per second
         timer.start();
     }
 
@@ -45,6 +43,8 @@ public class DrawPadDemo implements ActionListener {
         // Update objects here
         // Example: Move the circle horizontally
         circle.setPos_x(circle.getPos_x() + 1);
+        rectangle.setPos_x(rectangle.getPos_x()+2);
+        rectangle.resize(1.01d);
         drawPadPanel.repaint();
     }
 

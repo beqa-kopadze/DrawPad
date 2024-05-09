@@ -11,7 +11,7 @@ import java.util.List;
  * when the collection of shapes changes.
  */
 public class DrawPadPanel extends JPanel {
-    private List<Shape> shapes; // List to store the shapes to be drawn
+    private final List<Shape> shapes; // List to store the shapes to be drawn
 
     /**
      * Default constructor that initializes an empty list of shapes.

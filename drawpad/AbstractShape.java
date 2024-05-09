@@ -1,5 +1,6 @@
 package drawpad;
 
+import vector.Vector2D;
 import java.awt.*;
 
 /**
@@ -11,6 +12,7 @@ public abstract class AbstractShape implements Shape {
     private Color color; // The color of the shape
     private double pos_x; // The x-coordinate of the shape's position
     private double pos_y; // The y-coordinate of the shape's position
+    private double position; // The 2D vector for the shape's position
 
     /**
      * Constructor to create an AbstractShape object with a specified color and position.
@@ -26,6 +28,18 @@ public abstract class AbstractShape implements Shape {
     }
 
     /**
+     * Constructor to create an AbstractShape object with a specified color and position.
+     *
+     * @param color the color of the shape
+     * @param position the x-coordinate of the shape's position
+     */
+    public AbstractShape(Color color, Vector2D position) {
+        this.color = color;
+        this.pos_x = position.x;
+        this.pos_y = position.y;
+    }
+
+    /**
      * Constructor to create an AbstractShape object with a default color (black) and a specified position.
      *
      * @param pos_x the x-coordinate of the shape's position
@@ -38,12 +52,31 @@ public abstract class AbstractShape implements Shape {
     }
 
     /**
+     * Constructor to create an AbstractShape object with a default color (black) and a specified position.
+     *
+     * @param position the y-coordinate of the shape's position
+     */
+    public AbstractShape(Vector2D position){
+        this.pos_x = position.x;
+        this.pos_y = position.y;
+    }
+
+    /**
      * Default constructor to create an AbstractShape object with a default color (black) and position (0, 0).
      */
     public AbstractShape(){
         this.color = Color.BLACK;
         this.pos_x = 0;
         this.pos_y = 0;
+    }
+
+    /**
+     * Returns the shape's position.
+     *
+     * @return Vector2D
+     */
+    public Vector2D getPosition(){
+        return new Vector2D(pos_x, pos_y);
     }
 
     /**
@@ -71,6 +104,16 @@ public abstract class AbstractShape implements Shape {
      */
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    /**
+     * Sets the position of the shape using a Vector2D instance.
+     *
+     * @param position the new position of the shape
+     */
+    public void setPosition(Vector2D position) {
+        this.pos_x = position.x;
+        this.pos_y = position.y;
     }
 
     /**
