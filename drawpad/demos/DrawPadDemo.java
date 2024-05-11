@@ -60,8 +60,7 @@ public class DrawPadDemo implements ActionListener {
         // Update objects here
         // Example: Move the circle horizontally
         circle.setPos_x(circle.getPos_x() + 1);
-        rectangle.setPos_x(rectangle.getPos_x() + 2);
-        rectangle.resize(1.01d);
+        rectangle.setRotation(rectangle.getRotation() + 0.05d);
         drawPadPanel.repaint();
 
         // Check if the "W" key is pressed

@@ -38,10 +38,17 @@ public class Circle extends AbstractShape {
         this.radius = radius;
     }
 
+    /**
+     * Constructor to create a Circle object with a specified radius and position.
+     *
+     * @param radius the radius of the circle
+     * @param position the position of the circle
+     */
     public Circle(double radius, Vector2D position){
         super(position.x, position.y);
         this.radius = radius;
     }
+
     /**
      * Constructor to create a Circle object with a specified radius.
      *
