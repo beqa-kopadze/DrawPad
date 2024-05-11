@@ -19,4 +19,4 @@
  *
  * <p>All classes in this package are immutable and thread-safe.
  */
-package vector;
+package drawpad.math;

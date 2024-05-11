@@ -1,4 +1,6 @@
-package drawpad;
+package drawpad.draw;
+
+import drawpad.shapes.Shape;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +13,7 @@ import java.util.List;
  * when the collection of shapes changes.
  */
 public class DrawPadPanel extends JPanel {
-    private final List<Shape> shapes; // List to store the shapes to be drawn
+    private final List<drawpad.shapes.Shape> shapes; // List to store the shapes to be drawn
 
     /**
      * Default constructor that initializes an empty list of shapes.
@@ -25,7 +27,7 @@ public class DrawPadPanel extends JPanel {
      *
      * @param shape the shape to be added
      */
-    public void addShape(Shape shape) {
+    public void addShape(drawpad.shapes.Shape shape) {
         shapes.add(shape);
         repaint();
     }
@@ -35,7 +37,7 @@ public class DrawPadPanel extends JPanel {
      *
      * @param shape the shape to be removed
      */
-    public void removeShape(Shape shape) {
+    public void removeShape(drawpad.shapes.Shape shape) {
         shapes.remove(shape);
         repaint();
     }

@@ -1,4 +1,4 @@
-package vector;
+package drawpad.math;
 
 import java.util.Objects;
 

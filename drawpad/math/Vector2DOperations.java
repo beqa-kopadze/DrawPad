@@ -1,4 +1,4 @@
-package vector;
+package drawpad.math;
 
 /**
  * This class provides static methods for performing common vector operations
