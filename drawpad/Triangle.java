@@ -1,6 +1,4 @@
-package drawpad.shapes;
-
-import drawpad.math.Vector2D;
+package drawpad;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;

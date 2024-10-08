@@ -1,4 +1,4 @@
-package drawpad.shapes;
+package drawpad;
 
 import java.awt.*;
 

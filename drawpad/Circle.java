@@ -1,6 +1,4 @@
-package drawpad.shapes;
-
-import drawpad.math.Vector2D;
+package drawpad;
 
 import java.awt.*;
 
@@ -12,7 +10,6 @@ import java.awt.*;
 public class Circle extends AbstractShape {
 
     private double radius;
-
     /**
      * Constructor to create a Circle object with a specified color, radius, and position.
      *
@@ -57,6 +54,7 @@ public class Circle extends AbstractShape {
     public Circle(double radius){
         this.radius = radius;
     }
+
 
     /**
      * Draws the circle on the provided Graphics object using the stored color, position, and radius.

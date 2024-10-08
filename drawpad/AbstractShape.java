@@ -1,6 +1,5 @@
-package drawpad.shapes;
+package drawpad;
 
-import drawpad.math.Vector2D;
 import java.awt.*;
 
 /**
