@@ -9,14 +9,12 @@ public abstract class Panel implements ActionListener {
     private InputManager input = new InputManager();
     private int with = 400;
     private int height = 800;
-    private int fps = 1000/60; // 60 frames per sec
+    private int fps = 16; // 60 frames per sec
     private String title;
 
 
-    //initialising the objects and other things if necessary
     public abstract void start();
 
-    //update method which is called 60 times a second
     public abstract void update();
 
     //this is a method which gets updated 60 times in a second
@@ -38,9 +36,6 @@ public abstract class Panel implements ActionListener {
         timer.start();
     }
 
-    public Panel() {
-        //SwingUtilities.invokeLater(this::createAndShowGUI);
-    }
     public void inwoke(){
         SwingUtilities.invokeLater(this::createAndShowGUI);
     }
