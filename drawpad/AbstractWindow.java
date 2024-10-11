@@ -10,13 +10,13 @@ import java.util.List;
  * It provides methods to add and remove shapes from the panel, and automatically redraws the panel
  * when the collection of shapes changes.
  */
-public class DrawPadPanel extends JPanel {
+public abstract class AbstractWindow extends JPanel {
     private final List<Shape> shapes; // List to store the shapes to be drawn
 
     /**
      * Default constructor that initializes an empty list of shapes.
      */
-    public DrawPadPanel() {
+    public AbstractWindow() {
         shapes = new ArrayList<>();
     }
 

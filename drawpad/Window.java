@@ -4,18 +4,20 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class Panel implements ActionListener {
-    private DrawPadPanel drawPadPanel = new DrawPadPanel();
+public class Window extends AbstractWindow implements ActionListener {
     private InputManager input = new InputManager();
-    private int with = 400;
+    private int with = 800;
     private int height = 800;
     private int fps = 16; // 60 frames per sec
-    private String title;
+    private String title = "New Panel";
 
+    public void start() {
 
-    public abstract void start();
+    }
 
-    public abstract void update();
+    public void update(){
+
+    }
 
     //this is a method which gets updated 60 times in a second
     @Override
@@ -27,16 +29,16 @@ public abstract class Panel implements ActionListener {
         start();
         JFrame frame = new JFrame(title);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(drawPadPanel);
+        frame.add(this);
         frame.setSize(with, height);
         frame.setVisible(true);
         // Set up key bindings for the DrawPadPanel
-        input.setupKeyBindings(drawPadPanel);
+        input.setupKeyBindings(this);
         Timer timer = new Timer(fps, this); // 60 frames per second
         timer.start();
     }
 
-    public void inwoke(){
+    public void invoke(){
         SwingUtilities.invokeLater(this::createAndShowGUI);
     }
 
@@ -70,13 +72,5 @@ public abstract class Panel implements ActionListener {
 
     public void setFps(int fps) {
         this.fps = fps;
-    }
-
-    public void setPanel(DrawPadPanel drawPadPanel) {
-        this.drawPadPanel = drawPadPanel;
-    }
-
-    public DrawPadPanel getPanel() {
-        return drawPadPanel;
     }
 }
